@@ -1,6 +1,23 @@
+import argparse
 import requests
 from skimage import io
-from helpers import visualize_img
+import matplotlib.pyplot as plt
+
+# construct the argument parse and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-p", "--path", required=True,
+    help="specify the path/to/your/image.jpeg")
+args = vars(ap.parse_args())
+
+
+def visualize_img(img, description_string="", x_label="", y_label=""):
+    plt.figure()
+    plt.title(description_string)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.gray()
+    plt.imshow(img)
+    plt.show()
 
 def send_request(image):
     url = 'http://localhost:80/predict' # if flask backend runs locally
@@ -13,6 +30,6 @@ def send_request(image):
     visualize_img(rem_background_img, description_string="removed background")
 
 if __name__=="__main__":
-    test_img_path = "/Users/felixasanger/Desktop/background_removal/test_data/test_images/J306P12B__20201116_22-25-33__c0.jpg"
+    test_img_path = args["path"]
     input_image = io.imread(test_img_path)  # <class 'numpy.ndarray'>
     send_request(input_image)

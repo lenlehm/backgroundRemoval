@@ -41,6 +41,7 @@ def get_prediction():
 
 if __name__ == '__main__':
     model_name = 'u2net'
+    # dir = cwd/saved_models/u2net/u2net.pth
     model_dir = os.path.join(os.getcwd(), 'saved_models', model_name, model_name + '.pth')
 
     load_neural_net(model_dir)  # load model at the beginning once only
