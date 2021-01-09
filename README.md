@@ -16,11 +16,9 @@ Create a folder names `saved_models` and load the previously downloaded model in
 
 4. Run `docker run -p 80:80 <your-image-name> .` in your terminal in the project directory.
 
-5. Open the file `model_request.py` and modify the variable `test_img_path` such that it contains the path to the image you want to process.
+5. Run `python model_request.py -p "path\\to\\your\\image.png"` for Windows or `python model_request.py -p "path/to/your/image.png"` on UNIX.
 
-6. Run `python model_request.py`
-
-7. You should see the processed image. 
+6. You should see the processed image. 
 
 ## Project Setup for usage in AWS EC2
 
