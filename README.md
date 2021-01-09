@@ -7,9 +7,10 @@ foreground of an image and remove the background.
 1. Clone this repo to your local machine. ```git clone https://github.com/lenlehm/backgroundRemoval.git```  
 
 1.1 Download the pre-trained U2-Net from [the authors](https://drive.google.com/file/d/1ao1ovG1Qtx4b7EoskHXmi2E9rp5CHLcZ/view).
-And if you're already on it [check out their original commit along with their research](https://github.com/NathanUA/U-2-Net)
+And if you're already on it [check out their original commit along with their research](https://github.com/NathanUA/U-2-Net)  
+Create a folder names `saved_models` and load the previously downloaded model into that folder with the following structure `/saved_models/u2net/u2net.pth`
 
-2. Set up a docker container as described in the following two steps.
+2. Install docker & Set up a docker container as described in the following two steps.
 
 3. Run `docker build -t <your-image-name> .` in your terminal in the project directory.
 
