@@ -15,7 +15,7 @@ And if you're already on it [check out their original commit along with their re
 
 4. Run `docker run -p 80:80 <your-image-name> .` in your terminal in the project directory.
 
-5. Open the file model_request.py` and modify the variable `test_img_path` such that it contains the path to the image you want to process.
+5. Open the file `model_request.py` and modify the variable `test_img_path` such that it contains the path to the image you want to process.
 
 6. Run `python model_request.py`
 
@@ -27,7 +27,7 @@ And if you're already on it [check out their original commit along with their re
 
 2. SSH into the running instance. 
 
-3. Run `sudo amazon-linux-extras install docker`
+3. Run `sudo yum install git`
 4. Run `sudo yum install docker`
 5. Run `sudo service docker start`
 6. Run `sudo usermod -a -G docker ec2-user`
