@@ -4,7 +4,8 @@ foreground of an image and remove the background.
 
 ## Project Setup for local testing in a docker container
 
-1. Clone this repo to your local machine. 
+1. Clone this repo to your local machine. '''git clone '''
+\br
 1.1 Download the pre-trained U2-Net from [the authors](https://drive.google.com/file/d/1ao1ovG1Qtx4b7EoskHXmi2E9rp5CHLcZ/view).
 And if you're already on it [check out their original commit along with their research](https://github.com/NathanUA/U-2-Net)
 
