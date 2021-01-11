@@ -30,11 +30,15 @@ Create a folder names `saved_models` and load the previously downloaded model in
 4. Run `sudo yum install docker`
 5. Run `sudo service docker start`
 6. Run `sudo usermod -a -G docker ec2-user`
-
 7. Exit the instance and login again to make the changes work. 
 
-8. Run `docker build -t <your-image-name> .` on the running instance.
+Download the image from Docker Hub:
+`docker pull lenlehm/background-removal:v1`
 
-9. Run `docker run -p 80:80 <your-image-name> .` on the running instance.
+Check whether the image is there: 
+`docker images`
+
+Run the container with the imageID you have seen from the previous command:
+`docker run -p 80:80 <your-imageID>`
 
 10. Open another terminal on your local machine and run `python model_request.py` (make sure that line 7 is not commented and contains the correct instance public-dns-name)
