@@ -26,19 +26,21 @@ Create a folder names `saved_models` and load the previously downloaded model in
 
 2. SSH into the running instance. 
 
-3. Run `sudo yum install git`
+3. Run `sudo yum install git` (optional for some more changes to come)
 4. Run `sudo yum install docker`
 5. Run `sudo service docker start`
 6. Run `sudo usermod -a -G docker ec2-user`
 7. Exit the instance and login again to make the changes work. 
 
-Download the image from Docker Hub:
-`docker pull lenlehm/background-removal:v1`
+8. Download the image from Docker Hub: `docker pull lenlehm/background-removal:v1`
 
-Check whether the image is there: 
-`docker images`
+9. Check whether the image is there: `docker images`
 
-Run the container with the imageID you have seen from the previous command:
-`docker run -p 80:80 <your-imageID>`
+10. Run the container with the imageID you have seen from the previous command: `docker run -p 80:80 <your-imageID>`
 
-10. Open another terminal on your local machine and run `python model_request.py` (make sure that line 7 is not commented and contains the correct instance public-dns-name)
+11. Navigate to your public Ip Address of your instance: `your.public.IPv4.address:80'
+You should not see something but you also shoudn't get an error if your instance is running.
+
+12. Open the file `model_request.py` on your machine and change the endpoint to `your.public.IPv4.address:80/predict'
+
+13. Run `python model_request.py -p "path/to/your/local/image.jpg"`
